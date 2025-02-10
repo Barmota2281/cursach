@@ -47,6 +47,8 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
+    background: var(--typography-primary);
+    overflow: hidden;
 }
 .container{
     margin: auto;
@@ -59,6 +61,8 @@ body{
     position: fixed;
     margin: auto;
     width: 100%;
+    z-index: 1000;
+    margin-top: -115px;
 }
 
 .header__nav1{
@@ -202,4 +206,63 @@ label{
     font-size: 21px;
     line-height: 160%;
     color: var(--typography-white);
+}
+
+.main{
+    position: relative;
+    margin-top: 115px;
+}
+
+.filter{
+    position: absolute;
+    z-index: 0;
+    background-color: #fc501f;
+    filter: blur(280px);
+    border-radius: 100%;
+    width: 860px;
+    height: 860px;
+}
+
+.filter1{
+    top: -600px;
+    right: -530px;
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+}
+
+.content__slider-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 267px;
+    max-width: 542px;
+}
+
+.content__slider-text h2{
+    font-family: var(--second-family) , sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 130%;
+    color: var(--typography-primary);
+}
+.content__slider-text > h2 > span{
+    color: var(--buttons-default-orange);
+}
+
+.content__slider-text p{
+    font-family: var(--second-family) , sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 135%;
+    color: var(--typography-primary);
+}
+
+.content__slider{
+    border-radius: 16px;
+    height: 500px;
+    background: var(--background-light-grey);
+    padding-left: 40px;
 }
