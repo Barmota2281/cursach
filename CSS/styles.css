@@ -46,6 +46,7 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 .container{
     margin: auto;
@@ -55,6 +56,9 @@ body{
 .header{
     background: var(--typography-primary);
     padding-top: 10px;
+    position: fixed;
+    margin: auto;
+    width: 100%;
 }
 
 .header__nav1{
@@ -88,6 +92,7 @@ body{
 .header__searching{
     display: flex;
     justify-content: space-between;
+    padding: 9px 0;
 }
 .header__searching-hrefs {
     display: flex;
@@ -97,10 +102,12 @@ label{
     display: none;
 }
 
-.header__searching-btn{
-    border-radius: 6px;
-    width: 76px;
+.header__searching-btn {
+    position: absolute;
+    right: 8px;
     height: 32px;
+    width: 76px;
+    border-radius: 6px;
     background: var(--buttons-default-orange);
     display: inline-flex;
     justify-content: center;
@@ -113,21 +120,86 @@ label{
     font-variant: small-caps;
     text-align: center;
     color: var(--typography-white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
 
 }
 
-.header__searching-catalogs{
+.header__searching-btn:hover {
+    background-color: var(--buttons-hover-orange);
+}
+
+.header__searching-catalogs, .header__searching-parts{
     display: flex;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.header__searching-catalogs:hover, .header__searching-parts:hover{
+    color: #d25400;
+}
+
+
+.header__searching-catalogs svg, .header__searching-parts svg {
+    margin-right: 8px;
+}
+
+.header__searching-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 642px;
+}
+
+.header__searching-input {
+    width: 100%;
+    padding-right: 90px;
 }
 
 .header__searching-parts{
     text-decoration: none;
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 112%; 
     letter-spacing: 0.01em;
-    font-variant: small-caps;
     text-align: center;
+    color: var(--typography-white);
+    display: flex;
+}
+
+.header__searching-input{
+    border-radius: 6px;
+    padding: 0 8px 0 12px;
+    width: 642px;
+    height: 42px;
+    border: none;
+}
+
+.header__searching-input::placeholder {
+    font-family: var(--font-family) , sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 144%;
+    color: var(--typography-secondary);
+}
+
+.header__cart-price {
+    font-family: var(--font-family), sans-serif;
+    font-size: 16px;
+    color: var(--typography-primary);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 75px;
+}
+
+.header__cart-price-value {
+    font-family: var(--font-family) , sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 160%;
     color: var(--typography-white);
 }
