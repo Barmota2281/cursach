@@ -49,7 +49,6 @@ body{
     padding: 0;
     position: relative;
     background: var(--typography-primary);
-    overflow: hidden;
 }
 .container{
     margin: auto;
@@ -63,7 +62,7 @@ body{
     margin: auto;
     width: 100%;
     z-index: 1000;
-    margin-top: calc(-109px - 80px);
+    margin-top: -109px  ;
 }
 
 .header__nav1{
@@ -212,6 +211,7 @@ label{
 .main{
     position: relative;
     margin-top: 109px;
+    overflow: hidden;
 }
 
 .filter{
@@ -269,7 +269,7 @@ label{
     height: 500px;
     background: var(--background-light-grey);
     padding-left: 40px;
-    margin-top: calc(109px + 80px);
+    margin-top: 80px;
     overflow: hidden;
     position: relative;
 }
@@ -284,4 +284,99 @@ label{
     display: flex;
     width: 100%;
     transition: transform 0.5s;
+}
+
+.spare_parts{
+    padding: 80px 0;
+}
+
+.spare_parts-head{
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 135%;
+    color: var(--buttons-default-orange);
+    margin: 0 0 24px 0;
+}
+
+.spare_parts__items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.spare_parts__item{
+    border: 1px solid var(--typography-tertiary);
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 282px;
+    height: 464px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--typography-white);
+    transition: 0.2s linear;
+}
+
+.spare_parts__item:hover{
+    box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.4);
+}
+
+.spare_parts__item-prices{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.spare_parts__item-prices p{
+    margin: 0;
+}
+
+.spare_parts__item-price{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 160%;
+    color: var(--typography-primary);
+}
+
+.spare_parts__item-head{
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--typography-primary);
+    margin: 0 0 40px 0;
+}
+
+.spare_parts__item-sale{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: 0.01em;
+    font-variant: small-caps;
+    color: var(--typography-primary);
+}
+
+.spare_parts__item-sale span{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-decoration: line-through;
+    color: var(--typography-secondary);
+}
+
+.spare_parts__item-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.50px solid var(--buttons-default-orange);
+    border-radius: 6px;
+    padding: 14px 12px;
+    width: 50px;
+    height: 42px;
+    background: var(--typography-white);
+    margin-top: 14px;
 }
