@@ -229,6 +229,19 @@ label{
     right: -530px;
 }
 
+.filter2{
+    width: 595px;
+    height: 595px;
+    top: 630px;
+    left: -450px;
+}
+
+.filter3{
+    top: 1400px;
+    right: -530px;
+    display: none;
+}
+
 .content{
     position: relative;
     z-index: 2;
@@ -287,6 +300,8 @@ label{
 
 .spare_parts{
     padding: 80px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .spare_parts-head{
@@ -423,3 +438,32 @@ label{
 .brands__head-href:hover{
     color: #d25400;
 }
+
+.consumables {
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.consumables__head-link{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 144%;
+    color: var(--buttons-default-orange);
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.consumables__head-link:hover{
+    color: #d25400;
+    margin-top: 2px;
+}
+
+.consumables__head{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
