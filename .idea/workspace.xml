@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added one more section" />
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added one more section1">
+      <change afterPath="$PROJECT_DIR$/images/F-WrenchScrewdriver(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/L-Medal(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/L-Settings(2).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +26,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -68,7 +74,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
       </set>
     </attachedChunks>
   </component>
@@ -85,6 +91,10 @@
       <workItem from="1739263670621" duration="99000" />
       <workItem from="1739502406501" duration="12981000" />
       <workItem from="1739523565237" duration="600000" />
+      <workItem from="1739524176572" duration="182000" />
+      <workItem from="1739762286346" duration="38000" />
+      <workItem from="1739775341380" duration="1967000" />
+      <workItem from="1739848279850" duration="4538000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -102,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739523439148</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added one more section1">
+      <option name="closed" value="true" />
+      <created>1739524216363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739524216363</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +153,7 @@
     <MESSAGE value="много чего добавил(типа)" />
     <MESSAGE value="added one more section" />
     <MESSAGE value="fixup! added one more section" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixup! added one more section" />
+    <MESSAGE value="added one more section1" />
+    <option name="LAST_COMMIT_MESSAGE" value="added one more section1" />
   </component>
 </project>
