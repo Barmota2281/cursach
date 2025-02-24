@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="something does">
-      <change afterPath="$PROJECT_DIR$/images/certificate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/louismoto.png" afterDir="false" />
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added two new sections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -94,7 +92,10 @@
       <workItem from="1739762286346" duration="38000" />
       <workItem from="1739775341380" duration="1967000" />
       <workItem from="1739848279850" duration="4645000" />
-      <workItem from="1739933811211" duration="7081000" />
+      <workItem from="1739933811211" duration="8136000" />
+      <workItem from="1740021266915" duration="104000" />
+      <workItem from="1740365739399" duration="1944000" />
+      <workItem from="1740367828817" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -128,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739868821906</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added two new sections">
+      <option name="closed" value="true" />
+      <created>1739943029505</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739943029505</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +172,7 @@
     <MESSAGE value="fixup! added one more section" />
     <MESSAGE value="added one more section1" />
     <MESSAGE value="something does" />
-    <option name="LAST_COMMIT_MESSAGE" value="something does" />
+    <MESSAGE value="added two new sections" />
+    <option name="LAST_COMMIT_MESSAGE" value="added two new sections" />
   </component>
 </project>

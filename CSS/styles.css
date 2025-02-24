@@ -582,3 +582,36 @@ label{
 .certificates{
     margin-top: 85px;
 }
+
+.contacts__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__head-title{
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 135%;
+    color: var(--buttons-default-orange);
+}
+
+.contacts__head-link{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 144%;
+    color: var(--buttons-default-orange);
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.contacts__head-link:hover{
+    color: #d25400;
+    margin-top: 2px;
+}
+
+.contacts__head-link svg{
+    margin-left: 9px;
+}
