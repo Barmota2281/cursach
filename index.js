@@ -1,22 +1,35 @@
-let currentIndex = 0;
-const carouselItems = document.querySelectorAll('.content__slider-item');
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.querySelector('.form__input--tel');
 
-function goToSlide(index) {
-    if (index &lt; 0) {
-        index = carouselItems.length - 1;
-    } else if (index &gt;= carouselItems.length) {
-        index = 0;
-    }
-    currentIndex = index;
-    document.querySelector('.content__slider-inner').style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+    const formatPhoneNumber = (value) => {
+        let phoneNumber = value.replace(/\D/g, '');
+        if (!phoneNumber) return '';
 
-function goToNextSlide() {
-    goToSlide(currentIndex + 1);
-}
+        if (phoneNumber.length > 11) {
+            phoneNumber = phoneNumber.substr(0, 11);
+        }
 
-function goToPrevSlide() {
-    goToSlide(currentIndex - 1);
-}
+        if (phoneNumber[0] === '7') {
+            let formatted = '+7 ';
+            if (phoneNumber.length > 1) {
+                formatted += '(' + phoneNumber.substr(1, 3);
+            }
+            if (phoneNumber.length > 4) {
+                formatted += ') ' + phoneNumber.substr(4, 3);
+            }
+            if (phoneNumber.length > 7) {
+                formatted += '-' + phoneNumber.substr(7, 2);
+            }
+            if (phoneNumber.length > 9) {
+                formatted += '-' + phoneNumber.substr(9, 2);
+            }
+            return formatted;
+        }
+        return phoneNumber;
+    };
 
-setInterval(goToNextSlide, 3000); // автоматическая прокрутка каждые 3 секунды
+    phoneInput.addEventListener('input', function(e) {
+        const formatted = formatPhoneNumber(e.target.value);
+        e.target.value = formatted;
+    });
+});
