@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phoneNumber = phoneNumber.substr(0, 11);
         }
 
-        if (phoneNumber[0] === '7') {
+        if (phoneNumber[0] === '7' || phoneNumber[0] === '8') {
             let formatted = '+7 ';
             if (phoneNumber.length > 1) {
                 formatted += '(' + phoneNumber.substr(1, 3);
