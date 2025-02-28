@@ -862,7 +862,7 @@ section{
     margin-top: 10px;
 }
 
-.footer__head-item .footer__head-link:first-child{
+.footer__head-item .footer__head-link:first-of-type{
     margin-top: 0;
 }
 
@@ -878,4 +878,15 @@ section{
     color: var(--typography-secondary);
     margin-bottom: 16px;
     margin-top: 0;
+}
+
+.footer__head-item--sub{
+    display: flex;
+    flex-direction: column;
+    margin-left: 108px;
+}
+
+.footer__head-subsubitem{
+    display: flex;
+    align-items: end;
 }
