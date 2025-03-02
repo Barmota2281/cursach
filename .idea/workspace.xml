@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="updated footer section with phone input and improved styling">
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="enhanced footer section with new contact details and improved layout">
+      <change afterPath="$PROJECT_DIR$/.github/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS/search-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS/spare-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/search-results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/spare-parts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/copilot-instructions.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/copilot-instructions.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -13,6 +21,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -23,6 +39,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -33,7 +50,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Barmota2281/cursach.git&quot;,
-    &quot;accountId&quot;: &quot;5a1050f5-5391-4453-9a5d-82717ede043c&quot;
+    &quot;accountId&quot;: &quot;0bef2243-4908-4a26-b4d5-4d9394800026&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -49,23 +66,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/student1632/WebstormProjects/cursach/images",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\cursach\images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -98,10 +120,7 @@
       <workItem from="1740367828817" duration="345000" />
       <workItem from="1740368973354" duration="1181000" />
       <workItem from="1740370159400" duration="4674000" />
-      <workItem from="1740625428906" duration="7606000" />
-      <workItem from="1740712712643" duration="38000" />
-      <workItem from="1740712755561" duration="84000" />
-      <workItem from="1740712845863" duration="3868000" />
+      <workItem from="1740919296081" duration="11606000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />

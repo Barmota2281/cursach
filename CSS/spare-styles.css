@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css');
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/geometria_medium.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/geometria_bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --typography-primary: #2b2b2b;
+    --typography-secondary: #8e8e93;
+    --typography-white: #fff;
+    --typography-red: #b00;
+    --typography-tertiary: #ddd;
+    --icons-black: #2b2b2b;
+    --buttons-default-orange: #f60;
+    --buttons-white: #fff;
+    --buttons-hover-orange: #d25400;
+    --buttons-disabled: #f2f3f5;
+    --buttons-outline: #2b2b2b;
+    --buttons-hover-white: #f2f3f5;
+    --background-blue: #071871;
+    --background-white: #fff;
+    --background-light-grey: #f8f8f8;
+    --elements-blue: #071871;
+    --elements-orange: #f60;
+    --elements-grey: #bfbfbf;
+    --logo-orange: #f60;
+    --logo-white: #fff;
+    --font-family: "Open Sans", sans-serif;
+    --second-family: "Roboto Slab", sans-serif;
+    --third-family: "Geometria", sans-serif;
+}
+
+
+.body{
+    background: var(--typography-white) !important;
+}
+
+.brands{
+    margin: 0;
+    background: var(--background-light-grey) !important;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
