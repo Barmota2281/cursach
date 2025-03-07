@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added two new sections">
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added new sections for location and filters with updated styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/spare-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/spare-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/spare-parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/spare-parts.html" afterDir="false" />
@@ -100,7 +100,10 @@
       <workItem from="1740368973354" duration="1181000" />
       <workItem from="1740370159400" duration="4674000" />
       <workItem from="1740974355581" duration="6594000" />
-      <workItem from="1740987774563" duration="1784000" />
+      <workItem from="1740987774563" duration="1831000" />
+      <workItem from="1741018586055" duration="81000" />
+      <workItem from="1741023272582" duration="1065000" />
+      <workItem from="1741092595980" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -142,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739943029505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added new sections for location and filters with updated styles">
+      <option name="closed" value="true" />
+      <created>1740996073509</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740996073509</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +189,7 @@
     <MESSAGE value="added one more section1" />
     <MESSAGE value="something does" />
     <MESSAGE value="added two new sections" />
-    <option name="LAST_COMMIT_MESSAGE" value="added two new sections" />
+    <MESSAGE value="added new sections for location and filters with updated styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new sections for location and filters with updated styles" />
   </component>
 </project>

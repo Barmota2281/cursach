@@ -117,3 +117,30 @@
 .filters{
     padding-top: 48px;
 }
+.filters__inner{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+.filters__inner-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    background: var(--background-light-grey);
+    /* line-height: 26px; */
+    line-height: 144%;
+    color: var(--typography-primary);
+    transition: all 0.1s;
+}
+.filters__inner-item:hover, .filters__inner-item:focus{
+    background: var(--elements-orange);
+    color: var(--typography-white);
+    cursor: pointer;
+}
