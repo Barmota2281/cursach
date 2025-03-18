@@ -116,6 +116,7 @@
 
 .filters{
     padding-top: 48px;
+    padding-bottom: 80px;
 }
 .filters__inner{
     display: flex;
@@ -143,4 +144,42 @@
     background: var(--elements-orange);
     color: var(--typography-white);
     cursor: pointer;
+}
+
+.filters__results {
+    margin-top: 30px;
+    display: none;
+}
+
+.filters__results-title {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 130%;
+    color: var(--buttons-default-orange);
+    margin-bottom: 15px;
+}
+
+.filters__results-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filters__results-item {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 144%;
+    color: var(--typography-primary);
+    padding: 10px 15px;
+    background: var(--background-light-grey);
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.filters__results-item:hover {
+    background: var(--elements-orange);
+    color: var(--typography-white);
 }

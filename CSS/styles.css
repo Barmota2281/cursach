@@ -739,6 +739,14 @@ section{
     margin: 0;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex !important; /* Принудительное отображение */
+    color: var(--buttons-default-orange);
+}
+
+
+
 .footer__head-text{
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
