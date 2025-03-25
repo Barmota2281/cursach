@@ -106,9 +106,31 @@ body{
     display: flex;
     gap: 32px;
 }
-label{
+/*for mobile header*/
+
+.mobile__header{
     display: none;
 }
+
+.header_mobile-search{
+    position: relative;
+}
+
+.header__mobile-search-icon{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.mobile_navigation{
+    background: none;
+    border: none;
+}
+
+
+
 
 .header__searching-btn {
     position: absolute;
@@ -216,6 +238,15 @@ label{
     font-size: 21px;
     line-height: 160%;
     color: var(--typography-white);
+}
+
+.header__mobile-search{
+    border: 1px solid var(--typography-tertiary);
+    border-radius: 6px;
+    padding: 0px 8px 0px 44px;
+        width: 259px;
+    height: 40px;
+    background: var(--typography-white);
 }
 
 .main{
@@ -911,6 +942,10 @@ section{
     align-items: end;
 }
 
+.header__logo2{
+    display: none;
+}
+
 /* Laptop styles (1024px - 1366px) */
 @media screen and (max-width: 1366px) {
     .container {
@@ -947,6 +982,10 @@ section{
     .certificates__inner {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .header__searching-input{
+        width: 500px;
     }
 }
 
@@ -1031,6 +1070,19 @@ section{
         gap: 30px;
         justify-content: center;
     }
+    .contact__inner{
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
+    .header__searching-input{
+        width: 400px;
+    }
+
+    .content__slider-img{
+        display: none;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1044,4 +1096,48 @@ section{
         font-size: 14px;
         white-space: nowrap;
     }
+
+    .header__nav-contacts{
+        display: none;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+    .header__logo2{
+        display: inline;
+    }
+
+    .header__searching{
+        display: none;
+    }
+
+    .header__nav-number{
+        display: none;
+    }
+
+    .header{
+        height: 64px;
+        margin-top: -64px;
+    }
+
+    .main{
+        margin-top: 64px;
+    }
+
+    .mobile__header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contacts__head-link{
+        display: none;
+    }
+    .contact__inner{
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
 }
