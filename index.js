@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Добавьте плавность при автопрокрутке
             autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: true,
             },
 
             // Эффект затухания для плавности
@@ -183,5 +183,126 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultsContainer.style.display = 'none';
             }
         });
+    });
+
+    // Инициализация корзины
+    let cart = {
+        total: 0,
+        items: []
+    };
+
+    // Получаем все кнопки добавления в корзину
+    const addToCartButtons = document.querySelectorAll('.spare_parts__item-btn');
+    const cartPriceElement = document.querySelector('.header__cart-price-value');
+
+    // Обработчик для каждой кнопки
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Если товар уже добавлен, ничего не делаем
+            if (this.classList.contains('added')) {
+                return;
+            }
+
+            // Находим родительский элемент товара
+            const productItem = this.closest('.spare_parts__item');
+
+            // Получаем цену товара
+            const priceElement = productItem.querySelector('.spare_parts__item-price');
+            const priceText = priceElement.textContent.trim();
+            const price = parseFloat(priceText.replace(/\s+/g, '').replace('₽', ''));
+
+            // Добавляем товар в корзину
+            cart.total += price;
+            cart.items.push({
+                price: price,
+                name: productItem.querySelector('.spare_parts__item-head').textContent.trim()
+            });
+
+            // Обновляем отображение корзины
+            updateCartDisplay();
+
+            // Меняем вид кнопки на галочку
+            this.classList.add('added');
+
+            // Заменяем иконку корзины на галочку
+            const oldSVG = this.querySelector('svg');
+            if (oldSVG) {
+                oldSVG.remove();
+
+                // Создаем SVG галочки
+                this.innerHTML = `
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L7 12L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+            }
+
+            // Добавляем анимацию
+            this.style.animation = 'pulse 0.3s ease-in-out';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 300);
+        });
+    });
+
+    // Функция обновления отображения корзины
+    function updateCartDisplay() {
+        if (cartPriceElement) {
+            cartPriceElement.textContent = `${cart.total} ₽`;
+        }
+    }
+
+    // Добавляем стиль для анимации
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Получаем элементы
+    const formLabel = document.querySelector('.form__label');
+    const modalBid = document.querySelector('.modal_bid');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalBtn = document.querySelector('.modal_bid-btn');
+
+    // Функция для открытия модального окна
+    function openModal() {
+        modalBid.classList.add('show');
+        modalOverlay.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
+    }
+
+    // Функция для закрытия модального окна
+    function closeModal() {
+        modalBid.classList.remove('show');
+        modalOverlay.classList.remove('show');
+        document.body.style.overflow = ''; // Разблокируем прокрутку страницы
+    }
+
+    // Обработчик клика по кнопке отправки
+    formLabel.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    // Закрытие при клике на оверлей
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Закрытие при клике на кнопку в модальном окне
+    if (modalBtn) {
+        modalBtn.addEventListener('click', closeModal);
+    }
+
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalBid.classList.contains('show')) {
+            closeModal();
+        }
     });
 });

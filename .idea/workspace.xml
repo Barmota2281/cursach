@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added contacts page and styles with responsive design">
-      <change afterPath="$PROJECT_DIR$/images/img_for_content.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logo_for_header.png" afterDir="false" />
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added new sections for location and filters with updated styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -44,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Barmota2281/cursach.git&quot;,
-    &quot;accountId&quot;: &quot;0bef2243-4908-4a26-b4d5-4d9394800026&quot;
+    &quot;accountId&quot;: &quot;c3c9576f-49d0-4eda-a824-4630242fe542&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -60,28 +51,23 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/student1632/WebstormProjects/cursach/images&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\WebstormProjects\cursach\images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -114,10 +100,17 @@
       <workItem from="1740367828817" duration="345000" />
       <workItem from="1740368973354" duration="1181000" />
       <workItem from="1740370159400" duration="4674000" />
-      <workItem from="1740919296081" duration="11606000" />
-      <workItem from="1742891402649" duration="2212000" />
-      <workItem from="1742894875274" duration="87000" />
-      <workItem from="1742903317320" duration="8453000" />
+      <workItem from="1740974355581" duration="6594000" />
+      <workItem from="1740987774563" duration="1831000" />
+      <workItem from="1741018586055" duration="81000" />
+      <workItem from="1741023272582" duration="1065000" />
+      <workItem from="1741092595980" duration="79000" />
+      <workItem from="1742195366047" duration="1506000" />
+      <workItem from="1742266765700" duration="5307000" />
+      <workItem from="1742960549066" duration="1348000" />
+      <workItem from="1742963014794" duration="2790000" />
+      <workItem from="1743043689451" duration="7206000" />
+      <workItem from="1743057269787" duration="1483000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -159,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739943029505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added new sections for location and filters with updated styles">
+      <option name="closed" value="true" />
+      <created>1740996073509</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740996073509</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +196,7 @@
     <MESSAGE value="added one more section1" />
     <MESSAGE value="something does" />
     <MESSAGE value="added two new sections" />
-    <option name="LAST_COMMIT_MESSAGE" value="added two new sections" />
+    <MESSAGE value="added new sections for location and filters with updated styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new sections for location and filters with updated styles" />
   </component>
 </project>

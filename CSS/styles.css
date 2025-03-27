@@ -43,7 +43,6 @@
 }
 
 
-
 body{
     margin: 0;
     padding: 0;
@@ -244,7 +243,7 @@ body{
     border: 1px solid var(--typography-tertiary);
     border-radius: 6px;
     padding: 0px 8px 0px 44px;
-        width: 259px;
+    width: 259px;
     height: 40px;
     background: var(--typography-white);
 }
@@ -447,6 +446,63 @@ section{
     height: 42px;
     background: var(--typography-white);
     margin-top: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.spare_parts__item-btn::before {
+    content: "В корзину";
+    position: absolute;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #fff;
+    transform: translateX(40px);
+    transition: all 0.3s ease;
+}
+
+.spare_parts__item-btn svg {
+    transition: all 0.3s ease;
+}
+
+.spare_parts__item-btn:hover {
+    width: 90px;
+
+    background-color: var(--buttons-default-orange);
+}
+
+.spare_parts__item-btn:hover svg {
+    display: none;
+}
+
+.spare_parts__item-btn:hover::before {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.spare_parts__item-btn.added {
+    width: 50px;
+    background-color: var(--buttons-default-orange);
+    position: relative;
+}
+
+.spare_parts__item-btn.added svg {
+    fill: #fff;
+    transform: none;
+}
+
+.spare_parts__item-btn.added::before {
+    content: "";
+    opacity: 0;
+}
+
+/* Стиль для галочки */
+.spare_parts__item-btn.added .check-icon {
+    position: absolute;
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+    display: block;
 }
 
 .brands__parts{
@@ -946,6 +1002,110 @@ section{
     display: none;
 }
 
+.modal_bid{
+    display: flex;
+
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 20px;
+    width: 333px;
+    height: 192px;
+    background: var(--typography-white);
+}
+
+.modal_bid-title{
+    font-family: var(--second-family), sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
+    /* line-height: 23px; */
+    line-height: 130%;
+    color: #000;
+}
+
+.modal_bid-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.modal_bid-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0px;
+    border-radius: 6px;
+    padding: 12px;
+    width: 293px;
+    height: 48px;
+    background: var(--buttons-default-orange);
+    margin-top: 40px;
+    border: none;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+    /* line-height: 18px; */
+    line-height: 112%;
+    letter-spacing: 0.01em;
+    font-variant: small-caps;
+    text-align: center;
+    color: var(--typography-white);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    display: none;
+}
+
+.modal_bid.show {
+    display: flex;
+    animation: modalAppear 0.3s forwards;
+}
+.modal-overlay.show {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal_bid {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Laptop styles (1024px - 1366px) */
 @media screen and (max-width: 1366px) {
     .container {
@@ -980,8 +1140,7 @@ section{
     }
 
     .certificates__inner {
-        flex-wrap: wrap;
-        justify-content: center;
+        overflow-x: scroll;
     }
 
     .header__searching-input{
@@ -1016,7 +1175,6 @@ section{
     }
 
     .spare_parts__items {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
     }
@@ -1025,9 +1183,13 @@ section{
         max-width: 320px;
     }
 
+    .brands__inner{
+        overflow-x: scroll ;
+    }
+
     .brands__parts {
-        flex-wrap: wrap;
         justify-content: center;
+
         gap: 20px;
     }
 
@@ -1036,7 +1198,7 @@ section{
     }
 
     .guarantee__main {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .guarantee__main-right img {
@@ -1083,6 +1245,56 @@ section{
         display: none;
     }
 
+    .footer__head-logo{
+        display: none;
+    }
+
+    .footer__head-item--sub{
+        margin-left: 0;
+    }
+
+    .footer__head-subsubitem{
+        gap: 30px;
+    }
+
+    .guarantee__main-guarantees-item{
+        background-color: var(--typography-white);
+        border-radius: 6px;
+        padding: 12px;
+        width: 166px;
+        height: 135px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .guarantee__main-guarantees-item span{
+        color: var(--typography-primary);
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .guarantee__main-guarantees-down{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .guarantee__main-guarantees-up{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .guarantee__main-titles{
+        font-family: var(--second-family), sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+
+        /* line-height: 24px; */
+        line-height: 150%;
+        text-align: center;
+        color: var(--typography-primary);
+        margin: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1140,4 +1352,56 @@ section{
         column-gap: 10px;
     }
 
+
+    .footer__head-logo{
+        display: none;
+    }
+
+    .footer__head-item--sub{
+        margin-left: 0;
+    }
+
+    .footer__head-subsubitem{
+        gap: 30px;
+    }
+    .brands__inner {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 15px; /* Для скроллбара */
+    }
+
+    .brands__parts {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        margin-right: 0;
+        width: auto;
+    }
+
+    .brands__part {
+        min-width: 200px;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+
+    .brands__inner::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .brands__inner::-webkit-scrollbar-thumb {
+        background-color: var(--buttons-default-orange);
+        border-radius: 4px;
+    }
+
+    .form__input-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form__label{
+        margin-left: 0;
+        margin-top: 15px;
+    }
 }
