@@ -116,6 +116,7 @@
 .aboutbrand__inner{
     display: flex;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 .aboutbrand__inner-text{
@@ -124,6 +125,7 @@
     font-size: 16px;
     line-height: 144%;
     color: var(--typography-primary);
+    max-width: 700px;
 }
 
 .aboutbrand__inner-title{
@@ -136,6 +138,9 @@
 }
 
 .aboutbrand__inner-right{
-    margin-top: 98px;
+    margin-top: 50px;
+}
+.aboutbrand__inner-img{
+    width: 100%;
 }
 
