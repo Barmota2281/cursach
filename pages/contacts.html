@@ -83,6 +83,27 @@
                 <span class="header__cart-price-value" id="cart-price-value">0 ₽</span>
             </div>
         </div>
+
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar__menu">
+                <div class="sidebar__header">
+                    <div class="sidebar__brand">
+                        <!-- Логотип без текста -->
+                        <a href="#" class="eatly-logo"></a>
+                    </div>
+                </div>
+                <div class="sidebar__nav">
+                    <ul class="sidebar__list menu list-reset">
+                        <li class="menu__item"><a href="pages/eatly_menu.html">Меню</a></li>
+                        <li class="menu__item"><a href="pages/contact_page.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar__auth-buttons d-flex flex-column justify-content-between text-center">
+                    <a href="pages/sign_in.html" class="sidebar__login w-100">Войти</a>
+                    <a href="pages/sign_up.html" class="sidebar__sign-up w-100">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -183,7 +204,7 @@
 
         <div class="footer__head-main">
             <div class="footer__head-logo">
-                <img src="./images/footer-logo.png" alt="footer-logo">
+                <img src="../images/footer-logo.png" alt="footer-logo">
             </div>
             <div class="footer__head-item">
                 <h3 class="footer__head-subtitle">Каталог</h3>
@@ -214,6 +235,17 @@
 
     </div>
 </footer>
+
+<div class="modal-overlay"></div>
+<div class="modal_bid">
+    <h2 class="modal_bid-title">
+        Заявка принята!
+    </h2>
+    <p class="modal_bid-text">
+        Одидайте звонка нашего специалиста
+    </p>
+    <button class="modal_bid-btn">Вернуться в каталог</button>
+</div>
 <script src="../index.js"></script>
 </body>
 </html>

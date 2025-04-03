@@ -342,4 +342,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    body = document.body;
+
+// Открываем сайдбар меню при нажатии на кнопку
+    const headerButton = document.getElementById('headerMenuButton');
+    const sidebar = document.getElementById('sidebar');
+
+    headerButton.addEventListener('click', () => {
+        body.classList.toggle('lock')
+        headerButton.classList.toggle('');
+        sidebar.classList.toggle('sidebar--show');
+    });
 });
