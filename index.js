@@ -341,16 +341,36 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    body = document.body;
-
-// Открываем сайдбар меню при нажатии на кнопку
+    const body = document.body;
     const headerButton = document.getElementById('headerMenuButton');
     const sidebar = document.getElementById('sidebar');
 
     headerButton.addEventListener('click', () => {
         body.classList.toggle('lock')
-        headerButton.classList.toggle('');
         sidebar.classList.toggle('sidebar--show');
+    });
+    // Добавьте после существующего обработчика для кнопки меню
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', () => {
+            body.classList.remove('lock');
+            sidebar.classList.remove('sidebar--show');
+            modalOverlay.classList.remove('show');
+        });
+    }
+
+    // Модифицируйте существующий обработчик для кнопки открытия меню
+    headerButton.addEventListener('click', () => {
+        body.classList.toggle('lock');
+        sidebar.classList.toggle('sidebar--show');
+        modalOverlay.classList.toggle('show');
+    });
+
+    // Закрытие при нажатии на оверлей
+    modalOverlay.addEventListener('click', () => {
+        body.classList.remove('lock');
+        sidebar.classList.remove('sidebar--show');
+        modalOverlay.classList.remove('show');
     });
 });

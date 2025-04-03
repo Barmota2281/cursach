@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added responsive design improvements for contacts and search sections with updated styles">
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added sidebar menu with authentication links and modal confirmation for requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search-results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/spare-parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/spare-parts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,8 @@
       <workItem from="1743477600832" duration="7000" />
       <workItem from="1743563176035" duration="8782000" />
       <workItem from="1743648474981" duration="3683000" />
-      <workItem from="1743656048875" duration="9714000" />
+      <workItem from="1743656048875" duration="9746000" />
+      <workItem from="1743703763703" duration="1055000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -193,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743569703944</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added sidebar menu with authentication links and modal confirmation for requests">
+      <option name="closed" value="true" />
+      <created>1743670632495</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743670632495</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +238,7 @@
     <MESSAGE value="added new sections for location and filters with updated styles" />
     <MESSAGE value="added cart functionality with modal confirmation and improved button styles" />
     <MESSAGE value="added responsive design improvements for contacts and search sections with updated styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="added responsive design improvements for contacts and search sections with updated styles" />
+    <MESSAGE value="added sidebar menu with authentication links and modal confirmation for requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sidebar menu with authentication links and modal confirmation for requests" />
   </component>
 </project>
