@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://unpkg.com/swiper/swiper-bundle.min.css');
 
+
+
 @font-face {
     font-family: 'Geometria';
     src: url('../fonts/geometria_medium.otf') format('truetype');
@@ -56,12 +58,12 @@ body{
 
 .header{
     background: var(--typography-primary);
-    padding-top: 10px;
+    padding-top: 12px;
     position: fixed;
     margin: auto;
     width: 100%;
     z-index: 300;
-    margin-top: -109px;
+    top: 0;
 }
 
 .header__nav1{
@@ -267,8 +269,7 @@ body.lock {
     position: fixed;
     justify-content: flex-end;
     top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    right: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -277,12 +278,10 @@ body.lock {
     right: 0;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    padding: 0.75rem 1.5rem 0;
-    background-color: var();
+    padding: 16px;
+    background: var(--typography-primary);
     color: #fff;
     transform: translateX(100%);
     transition: transform 0.3s ease;
@@ -292,7 +291,7 @@ body.lock {
     flex: 0 0 auto;
     height: 56px;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
 }
 .sidebar .sidebar__header .eatly-logo::before {
     right: 6px;
@@ -307,51 +306,32 @@ body.lock {
     display: inline-block;
     padding: 1.5rem 0;
     border-bottom: 1px solid var();
-}
-.sidebar .sidebar__auth-buttons {
-    display: flex;
-    gap: 12px;
-    padding: 0 1.5rem 2rem;
-    position: absolute;
-    right: 0;
-    bottom: 40px;
-    left: 0;
-}
-.sidebar .sidebar__auth-buttons a {
-    padding: 0.75rem 1rem;
-    border-radius: 16px;
-    font-family: var(--second-family), sans-serif;
+    text-decoration: none;
+    font-family: var(--second-family),sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 600;
-    transition: background 0.2s ease, color 0.2s ease;
+    line-height: 150%;
+    text-align: center;
+    color: var(--typography-white);
 }
 
-.sidebar__login{
-    width: 100px;
+.sidebar .sidebar__nav .menu__item a > svg {
+    margin-bottom: -6px;
+    margin-right: 5px;
 }
 
-.sidebar .sidebar__login {
-    border: 1px solid var();
-    background-color: var();
-}
-.sidebar .sidebar__login:hover {
-    background-color: var();
-}
-.sidebar .sidebar__sign-up {
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #212529;
-}
-.sidebar .sidebar__sign-up:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-}
 .sidebar--show {
     display: flex;
     opacity: 1;
+    transform: translateX(0px);
+    background: var(--typography-primary);
 }
 .sidebar--show .sidebar__menu {
     transform: translateX(0px);
+}
+
+.sidebar__items-wrapper{
+    border-bottom:  0.50px solid var(--buttons-default-orange);
 }
 
 /* Адаптивность навбара */
@@ -395,14 +375,6 @@ body.lock {
     .header__right-side {
         gap: 8px;
     }
-    .header__right-side .header__login {
-        font-size: 16px;
-        padding: 16px 20px;
-    }
-    .header__right-side .header__sign-up {
-        font-size: 16px;
-        padding: 16px 20px;
-    }
 }
 @media screen and (max-width: 767.98px) {
     .eatly-logo {
@@ -436,7 +408,6 @@ body.lock {
     }
     .sidebar .sidebar__menu {
         border-radius: 0;
-        padding: 1.5rem 1.5rem 0;
         width: 100%;
     }
     .sidebar .sidebar__header {
@@ -453,7 +424,6 @@ body.lock {
     z-index: 9999;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease; /* плавное появление */
-    padding: 20px;
 }
 
 .sidebar--show {
@@ -497,7 +467,6 @@ body.lock {
 
 .main{
     position: relative;
-    margin-top: 109px;
     overflow: hidden;
 }
 
@@ -1768,13 +1737,9 @@ section{
     }
 
     .header{
-        height: 64px;
-        margin-top: -64px;
+        padding-bottom: 12px;
     }
 
-    .main{
-        margin-top: 64px;
-    }
 
     .mobile__header{
         display: flex;

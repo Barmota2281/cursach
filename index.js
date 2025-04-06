@@ -2,7 +2,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
+    // Проверяем, что элемент существует перед инициализацией
     const swiperContainer = document.querySelector('.swiper');
 
     if (swiperContainer) {
@@ -11,29 +11,39 @@ document.addEventListener('DOMContentLoaded', function() {
             spaceBetween: 30,
             loop: true,
 
-
-            speed: 800,
+            // Параметры для плавности
+            speed: 800, // Скорость перехода (миллисекунды)
             effect: 'slide', // Тип эффекта (можно использовать 'fade', 'cube', 'coverflow')
 
-
+            // Добавьте плавность при автопрокрутке
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: true,
             },
 
-
+            // Эффект затухания для плавности
             fadeEffect: {
                 crossFade: true
             },
-            cssMode: false,
+
+            // Настройка CSS-режима
+            cssMode: false, // Отключаем для более плавной анимации
+
+            // Добавляем эффект перетаскивания
             grabCursor: true,
 
-
+            // Плавность навигации
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
 
+            // Пагинация
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true, // Динамические точки
+            },
         });
     } else {
         console.error('Элемент слайдера не найден в DOM');
@@ -136,29 +146,29 @@ document.addEventListener('DOMContentLoaded', function() {
         'Э': ['Эксперт Э-5200', 'Энергомаш ПТ-99452', 'Эврика ЭБП-5018']
     };
 
-
+    // Получаем все элементы алфавита
     const alphabetItems = document.querySelectorAll('.filters__inner-item');
 
-
+    // Получаем элементы для отображения результатов
     const resultsContainer = document.querySelector('.filters__results');
     const resultsTitle = document.querySelector('.filters__results-title');
     const resultsItems = document.querySelector('.filters__results-items');
 
-
+    // Добавляем обработчик клика для каждой буквы
     alphabetItems.forEach(item => {
         item.addEventListener('click', function() {
-
+            // Получаем текст буквы
             const letter = this.textContent;
 
-
+            // Проверяем, есть ли бензопилы для этой буквы
             if (chainsawsDatabase[letter]) {
-
+                // Очищаем предыдущие результаты
                 resultsItems.innerHTML = '';
 
-
+                // Устанавливаем заголовок
                 resultsTitle.textContent = letter;
 
-                // Добавление всех бензопил на данную букву
+                // Добавляем все бензопилы на данную букву
                 chainsawsDatabase[letter].forEach(chainsaw => {
                     const chainsawElement = document.createElement('div');
                     chainsawElement.classList.add('filters__results-item');
@@ -166,26 +176,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     resultsItems.appendChild(chainsawElement);
                 });
 
-                // Показываем
+                // Показываем контейнер с результатами
                 resultsContainer.style.display = 'block';
             } else {
-                // Если нет, скрываем
+                // Если бензопил нет, скрываем контейнер
                 resultsContainer.style.display = 'none';
             }
         });
     });
 
-    // Корзина
+    // Инициализация корзины
     let cart = {
         total: 0,
         items: []
     };
 
-    // все кнопки добавления в корзину
+    // Получаем все кнопки добавления в корзину
     const addToCartButtons = document.querySelectorAll('.spare_parts__item-btn');
     const cartPriceElement = document.querySelector('.header__cart-price-value');
 
-
+    // Обработчик для каждой кнопки
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -210,24 +220,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: productItem.querySelector('.spare_parts__item-head').textContent.trim()
             });
 
+            // Обновляем отображение корзины
             updateCartDisplay();
 
+            // Меняем вид кнопки на галочку
             this.classList.add('added');
 
-            // корзину меняем на галочку
+            // Заменяем иконку корзины на галочку
             const oldSVG = this.querySelector('svg');
             if (oldSVG) {
                 oldSVG.remove();
 
-                // галочка
+                // Создаем SVG галочки
                 this.innerHTML = `
-                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
-                    style="fill:#FFFFFF;">
-                    <path d="M 42.875 8.625 C 42.84375 8.632813 42.8125 8.644531 42.78125 8.65625 C 42.519531 8.722656 42.292969 8.890625 42.15625 9.125 L 21.71875 40.8125 L 7.65625 28.125 C 7.410156 27.8125 7 27.675781 6.613281 27.777344 C 6.226563 27.878906 5.941406 28.203125 5.882813 28.597656 C 5.824219 28.992188 6.003906 29.382813 6.34375 29.59375 L 21.25 43.09375 C 21.46875 43.285156 21.761719 43.371094 22.050781 43.328125 C 22.339844 43.285156 22.59375 43.121094 22.75 42.875 L 43.84375 10.1875 C 44.074219 9.859375 44.085938 9.425781 43.875 9.085938 C 43.664063 8.746094 43.269531 8.566406 42.875 8.625 Z"></path>
-                  </svg>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L7 12L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 `;
             }
 
+            // Добавляем анимацию
             this.style.animation = 'pulse 0.3s ease-in-out';
             setTimeout(() => {
                 this.style.animation = '';
@@ -235,14 +247,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
+    // Функция обновления отображения корзины
     function updateCartDisplay() {
         if (cartPriceElement) {
             cartPriceElement.textContent = `${cart.total} ₽`;
         }
     }
 
-
+    // Добавляем стиль для анимации
     const style = document.createElement('style');
     style.textContent = `
         @keyframes pulse {
@@ -253,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-
+    // Получаем элементы
     const formLabel = document.querySelector('.form__label');
     const modalBid = document.querySelector('.modal_bid');
     const modalOverlay = document.querySelector('.modal-overlay');
@@ -273,15 +285,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = ''; // Разблокируем прокрутку страницы
     }
 
-
+    // Обработчик клика по кнопке отправки
     formLabel.addEventListener('click', function(e) {
         e.preventDefault();
         openModal();
     });
 
+    // Закрытие при клике на оверлей
     modalOverlay.addEventListener('click', closeModal);
 
-
+    // Закрытие при клике на кнопку в модальном окне
     if (modalBtn) {
         modalBtn.addEventListener('click', closeModal);
     }

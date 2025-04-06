@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added sidebar menu with navigation links and modal overlay for improved user experience">
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/spare-parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/spare-parts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,28 +54,23 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.contacts.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/student1632/WebstormProjects/cursach/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\WebstormProjects\cursach\images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -115,21 +113,7 @@
       <workItem from="1742960549066" duration="1348000" />
       <workItem from="1742963014794" duration="2790000" />
       <workItem from="1743043689451" duration="7206000" />
-      <workItem from="1743057269787" duration="2762000" />
-      <workItem from="1743130985748" duration="7864000" />
-      <workItem from="1743147781144" duration="25000" />
-      <workItem from="1743392170326" duration="739000" />
-      <workItem from="1743392990029" duration="794000" />
-      <workItem from="1743405596279" duration="1842000" />
-      <workItem from="1743477600832" duration="7000" />
-      <workItem from="1743563176035" duration="8782000" />
-      <workItem from="1743648474981" duration="3683000" />
-      <workItem from="1743656048875" duration="9746000" />
-      <workItem from="1743703763703" duration="1055000" />
-      <workItem from="1743704847365" duration="306000" />
-      <workItem from="1743735781050" duration="10571000" />
-      <workItem from="1743752666191" duration="771000" />
-      <workItem from="1743954469702" duration="649000" />
+      <workItem from="1743057269787" duration="1483000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -179,39 +163,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740996073509</updated>
     </task>
-    <task id="LOCAL-00007" summary="added cart functionality with modal confirmation and improved button styles">
-      <option name="closed" value="true" />
-      <created>1743061727116</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1743061727117</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added responsive design improvements for contacts and search sections with updated styles">
-      <option name="closed" value="true" />
-      <created>1743569703944</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1743569703944</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added sidebar menu with authentication links and modal confirmation for requests">
-      <option name="closed" value="true" />
-      <created>1743670632495</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743670632495</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added sidebar menu with navigation links and modal overlay for improved user experience">
-      <option name="closed" value="true" />
-      <created>1743704923554</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1743704923554</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,10 +200,6 @@
     <MESSAGE value="something does" />
     <MESSAGE value="added two new sections" />
     <MESSAGE value="added new sections for location and filters with updated styles" />
-    <MESSAGE value="added cart functionality with modal confirmation and improved button styles" />
-    <MESSAGE value="added responsive design improvements for contacts and search sections with updated styles" />
-    <MESSAGE value="added sidebar menu with authentication links and modal confirmation for requests" />
-    <MESSAGE value="added sidebar menu with navigation links and modal overlay for improved user experience" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sidebar menu with navigation links and modal overlay for improved user experience" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new sections for location and filters with updated styles" />
   </component>
 </project>
