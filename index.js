@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                redirectToSearch(searchInput.value);
+                    redirectToSearch(searchInput.value);
             }
         });
     }
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('lock')
         sidebar.classList.toggle('sidebar--show');
     });
-    // Добавьте после существующего обработчика для кнопки меню
+
     const sidebarClose = document.getElementById('sidebarClose');
 
     if (sidebarClose) {
@@ -360,10 +360,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Модифицируйте существующий обработчик для кнопки открытия меню
+
     headerButton.addEventListener('click', () => {
         body.classList.toggle('lock');
-        sidebar.classList.toggle('sidebar--show');
         modalOverlay.classList.toggle('show');
     });
 
@@ -373,4 +372,4 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.remove('sidebar--show');
         modalOverlay.classList.remove('show');
     });
-});
+})

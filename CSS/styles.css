@@ -60,7 +60,7 @@ body{
     position: fixed;
     margin: auto;
     width: 100%;
-    z-index: 1000;
+    z-index: 300;
     margin-top: -109px;
 }
 
@@ -268,13 +268,13 @@ body.lock {
     justify-content: flex-end;
     top: 0;
     left: 0;
-    z-index: 100;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 .sidebar .sidebar__menu {
     position: relative;
+    right: 0;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -299,7 +299,6 @@ body.lock {
 }
 .sidebar .sidebar__nav {
     overflow-y: auto;
-    margin-bottom: 11rem;
 }
 .sidebar .sidebar__nav::-webkit-scrollbar {
     display: none;
@@ -451,10 +450,9 @@ body.lock {
     width: 280px;
     height: 100vh;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 9999;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease; /* плавное появление */
-    overflow-y: auto;
     padding: 20px;
 }
 
@@ -481,7 +479,7 @@ body.lock {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 700;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1285,7 +1283,6 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 0px;
     border-radius: 6px;
     padding: 12px;
     width: 293px;
@@ -1312,7 +1309,7 @@ section{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9998;
+    z-index: 700;
     display: none;
 }
 
