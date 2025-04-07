@@ -144,3 +144,9 @@
     width: 100%;
 }
 
+@media screen and (max-width: 1360px) {
+    .aboutbrand__inner-right{
+        margin-top: 20px;
+    }
+}
+
