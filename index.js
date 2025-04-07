@@ -248,11 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Функция обновления отображения корзины
-    function updateCartDisplay() {
-        if (cartPriceElement) {
-            cartPriceElement.textContent = `${cart.total} ₽`;
-        }
-    }
 
     // Добавляем стиль для анимации
     const style = document.createElement('style');
@@ -385,4 +380,202 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.remove('sidebar--show');
         modalOverlay.classList.remove('show');
     });
+
+    // Добавьте код корзины в document.addEventListener('DOMContentLoaded', function() {...})
+
+    // Инициализация корзины
+
+    const cartSidebar = document.createElement('div');
+    cartSidebar.className = 'cart-sidebar';
+    document.body.appendChild(cartSidebar);
+
+    // Наполняем корзину содержимым
+    cartSidebar.innerHTML = `
+        <div class="cart-sidebar__header">
+            <h3>Корзина</h3>
+            <button class="cart-sidebar__close" id="cartSidebarClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-sidebar__items" id="cartItems">
+            <div class="cart-sidebar__empty">Ваша корзина пуста</div>
+        </div>
+        <div class="cart-sidebar__footer">
+            <div class="cart-sidebar__total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="cart-sidebar__checkout">Оформить заказ</button>
+        </div>
+    `;
+
+    // Получаем все кнопки добавления в корзину
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartSidebarClose = document.getElementById('cartSidebarClose');
+    const headerCartIcon = document.querySelector('.header__cart');
+
+    // Функция открытия корзины
+    function openCart() {
+        cartSidebar.classList.add('show');
+        modalOverlay.classList.add('show');
+        document.body.classList.add('lock');
+    }
+
+    // Функция закрытия корзины
+    function closeCart() {
+        cartSidebar.classList.remove('show');
+        modalOverlay.classList.remove('show');
+        document.body.classList.remove('lock');
+    }
+
+    // Обновление отображения корзины
+    function updateCartDisplay() {
+        if (cartPriceElement) {
+            cartPriceElement.textContent = `${cart.total} ₽`;
+        }
+
+        if (cartTotal) {
+            cartTotal.textContent = `${cart.total} ₽`;
+        }
+
+        if (cartItems) {
+            cartItems.innerHTML = '';
+
+            if (cart.items.length === 0) {
+                cartItems.innerHTML = '<div class="cart-sidebar__empty">Ваша корзина пуста</div>';
+                return;
+            }
+
+            cart.items.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-sidebar__item');
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-sidebar__item-img">
+                    <div class="cart-sidebar__item-info">
+                        <div class="cart-sidebar__item-name">${item.name}</div>
+                        <div class="cart-sidebar__item-price">${item.price} ₽</div>
+                    </div>
+                    <button class="cart-sidebar__item-remove" data-index="${index}">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+
+            // Добавляем обработчики на кнопки удаления
+            const removeButtons = document.querySelectorAll('.cart-sidebar__item-remove');
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    removeFromCart(index);
+                });
+            });
+        }
+    }
+
+    // Удаление товара из корзины
+    function removeFromCart(index) {
+        const price = cart.items[index].price;
+        cart.items.splice(index, 1);
+        cart.total -= price;
+        updateCartDisplay();
+    }
+
+    // Обработчик для кнопок добавления в корзину
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Если товар уже добавлен, открываем корзину
+            if (this.classList.contains('added')) {
+                openCart();
+                return;
+            }
+
+            // Находим родительский элемент товара
+            const productItem = this.closest('.spare_parts__item');
+
+            // Получаем информацию о товаре
+            const name = productItem.querySelector('.spare_parts__item-head').textContent.trim();
+            const priceElement = productItem.querySelector('.spare_parts__item-price');
+            const priceText = priceElement.textContent.trim();
+            const price = parseFloat(priceText.replace(/\s+/g, '').replace('₽', ''));
+            const image = productItem.querySelector('img').src;
+
+            // Добавляем товар в корзину
+            cart.total += price;
+            cart.items.push({
+                name: name,
+                price: price,
+                image: image
+            });
+
+            // Обновляем отображение корзины
+            updateCartDisplay();
+
+            // Меняем вид кнопки на галочку
+            this.classList.add('added');
+            const oldSVG = this.querySelector('svg');
+            if (oldSVG) {
+                oldSVG.remove();
+                this.innerHTML = `
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L7 12L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+            }
+
+            // Анимация и открытие корзины
+            this.style.animation = 'pulse 0.3s ease-in-out';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 300);
+
+            openCart();
+        });
+    });
+
+    // Обработчик для клика на иконку корзины в шапке
+    if (headerCartIcon) {
+        headerCartIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            openCart();
+        });
+    }
+
+    // Обработчик для закрытия корзины
+    if (cartSidebarClose) {
+        cartSidebarClose.addEventListener('click', closeCart);
+    }
+
+    // Закрытие при клике на оверлей
+    modalOverlay.addEventListener('click', function(e) {
+        closeCart();
+    });
+
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && cartSidebar.classList.contains('show')) {
+            closeCart();
+        }
+    });
+
+    // Оформление заказа
+    const checkoutButton = document.querySelector('.cart-sidebar__checkout');
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+            alert('Заказ успешно оформлен!');
+            cart = { total: 0, items: [] };
+            updateCartDisplay();
+            closeCart();
+        });
+    }
+
 })
