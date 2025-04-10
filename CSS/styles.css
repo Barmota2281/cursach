@@ -1325,8 +1325,8 @@ section{
 .cart-sidebar {
     position: fixed;
     top: 0;
-    right: -400px;
-    width: 380px;
+    right: -500px;
+    width: 500px;
     height: 100vh;
     background-color: #fff;
     z-index: 9999;

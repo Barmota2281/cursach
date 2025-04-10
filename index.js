@@ -233,8 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Создаем SVG галочки
                 this.innerHTML = `
-                    <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 8L7 12L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" id="Check-mark">
+                      <path d="M0 8.51 5.48 14 16 3.49 14.49 2l-9.01 9-3.99-3.99z" fill="#ffffff" class="color000000 svgShape"></path>
                     </svg>
                 `;
             }
@@ -526,8 +526,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (oldSVG) {
                 oldSVG.remove();
                 this.innerHTML = `
-                    <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 8L7 12L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.34916 14.0316L10.8234 20.2754L21.956 6.2219" stroke="white" stroke-width="1.5" />
                     </svg>
                 `;
             }

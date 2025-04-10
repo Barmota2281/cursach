@@ -47,10 +47,9 @@
     background: var(--typography-white) !important;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.main {
+    min-height: 820px;
+    padding-top: 120px;
 }
 
 .results__location-link{
@@ -73,9 +72,6 @@
     text-decoration: underline;
 }
 
-.location{
-    padding-top: 120px;
-}
 
 .results__location{
     margin-bottom: 32px;
@@ -103,50 +99,7 @@
     color: var(--typography-secondary);
 }
 
-.contact__inner-number, .contact__inner-time, .contact__inner-email, .contact__inner-place{
-    color: var(--typography-primary);
-}
-
-.contacts{
+.consumables{
     background: var(--background-light-grey);
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding: 48px 0;
 }
-
-.aboutbrand__inner{
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
-.aboutbrand__inner-text{
-    font-family: var(--font-family), sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 144%;
-    color: var(--typography-primary);
-    max-width: 700px;
-}
-
-.aboutbrand__inner-title{
-    font-family: var(--second-family), sans-serif;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 135%;
-    color: var(--typography-primary);
-    margin-bottom: 16px;
-}
-
-.aboutbrand__inner-right{
-    margin-top: 50px;
-}
-.aboutbrand__inner-img{
-    width: 100%;
-}
-
-@media screen and (max-width: 1360px) {
-    .aboutbrand__inner-right{
-        margin-top: 20px;
-    }
-}
-
