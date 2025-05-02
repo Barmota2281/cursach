@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added Consumables page with responsive design and styles, including sidebar menu and modal overlay">
+    <list default="true" id="9a494f96-4af1-4516-8115-ab0515d4f1e1" name="Changes" comment="added responsive design improvements for contacts page and implemented cart sidebar functionality with quantity controls">
+      <change afterPath="$PROJECT_DIR$/scripts/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/spare-parts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/Consumables.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/Consumables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/search-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/search-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Consumables.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Consumables.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/spare-parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/spare-parts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -154,6 +157,15 @@
       <workItem from="1744859297704" duration="7193000" />
       <workItem from="1744959104619" duration="20000" />
       <workItem from="1745171806588" duration="1338000" />
+      <workItem from="1745178683641" duration="879000" />
+      <workItem from="1745205078097" duration="2575000" />
+      <workItem from="1745300249825" duration="52000" />
+      <workItem from="1745467450033" duration="2521000" />
+      <workItem from="1745482037103" duration="101000" />
+      <workItem from="1745512520639" duration="4573000" />
+      <workItem from="1745551959696" duration="2651000" />
+      <workItem from="1745982967014" duration="1561000" />
+      <workItem from="1745990950632" duration="2061000" />
     </task>
     <task id="LOCAL-00001" summary="много чего добавил(типа)">
       <option name="closed" value="true" />
@@ -243,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744260423215</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added responsive design improvements for contacts page and implemented cart sidebar functionality with quantity controls">
+      <option name="closed" value="true" />
+      <created>1745178726765</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745178726765</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +305,7 @@
     <MESSAGE value="added sidebar menu with authentication links and modal confirmation for requests" />
     <MESSAGE value="added sidebar menu with navigation links and modal overlay for improved user experience" />
     <MESSAGE value="added Consumables page with responsive design and styles, including sidebar menu and modal overlay" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Consumables page with responsive design and styles, including sidebar menu and modal overlay" />
+    <MESSAGE value="added responsive design improvements for contacts page and implemented cart sidebar functionality with quantity controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="added responsive design improvements for contacts page and implemented cart sidebar functionality with quantity controls" />
   </component>
 </project>

@@ -1292,6 +1292,7 @@ section{
     animation: fadeIn 0.3s forwards;
 }
 .cart-sidebar {
+
     position: fixed;
     top: 0;
     right: -400px; /* изначально за пределами экрана */
@@ -1342,19 +1343,19 @@ section{
 .cart-sidebar {
     position: fixed;
     top: 0;
-    right: -500px;
-    width: 500px;
+    right: -400px; /* изначально скрыт справа */
+    width: 350px;
     height: 100vh;
     background-color: #fff;
-    z-index: 9999;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    z-index: 1001;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease; /* плавная анимация */
 }
 
 .cart-sidebar.show {
-    right: 0;
+    right: 0; /* при активации показываем */
 }
 
 .cart-sidebar__header {
@@ -1374,9 +1375,11 @@ section{
 }
 
 .cart-sidebar__close {
+    cursor: pointer;
+    padding: 8px;
     background: none;
     border: none;
-    cursor: pointer;
+    position: relative;
     color: var(--typography-primary);
 }
 
